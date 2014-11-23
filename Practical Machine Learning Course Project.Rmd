@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 
 # Practical Machine Learning Course Project
 
@@ -107,6 +110,7 @@ We calculate the in sample accuracy (prediction accuracy of our model on the tra
 training_pred <- predict(rf, train)
 confusionMatrix(training_pred, train$classe)
 ```
+From the Confusion Matrix and Statistics we get an in sample accuracy of 100% (please, to see the Confusion Matrix and related statistics check the pdf file in the same Github folder).
 
 Now we calculate the out of sample accuracy (prediction accuracy of our model on the testing data set):
 ```{r}
@@ -114,6 +118,7 @@ testing_pred <- predict(rf, test)
 confusionMatrix(testing_pred, test$classe)
 
 ```
+From the Confusion Matrix and Statistics we get an out of sample accuracy of 99.7% (again, please, to see the Confusion Matrix and related statistics check the pdf file in the same Github folder).
 
 Finally, we apply the machine learning algorithm to each of the 20 provided test cases and we write the answers to files as specified in the assignment:
 
